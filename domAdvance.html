@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=q, initial-scale=1.0">
+    <title>domAdvance</title>
+</head>
+
+<body>
+    <button onclick="addDiv()">Click for adding the div</button>
+    <script>
+        function addDiv(){
+            const first=document.createElement("div");
+            const second=document.createElement("h4");
+            first.innerHTML = "I am the first div element.";
+            second.innerHTML = "I am the heading that take place inside the div element.";
+            first.appendChild(second);
+            document.querySelector("body").appendChild(first);
+        }
+    </script>
+</body>
+
+</html>

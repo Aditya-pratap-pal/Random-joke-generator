@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bana de ToDo.</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter ToDo item"></input>
+    <button onclick="todo()">Add ToDo</button>
+    <script>
+        let i=1;
+        function todo(){
+            const value=document.querySelector("input").value;
+            const div=document.createElement("div");
+            const btn=document.createElement("button");
+            div.innerHTML=i+" "+value;
+            btn.innerHTML="Delete";
+            i++;
+            div.appendChild(btn);
+            document.querySelector("body").appendChild(div);
+        }
+    </script>
+</body>
+</html>
